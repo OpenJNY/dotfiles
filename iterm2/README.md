@@ -1,9 +1,24 @@
 # iTerm2
 
-
 ## 設定
-* Font: 15pt Source Code Pro for Powerline
-  * https://github.com/powerline/fonts
-* Theme: Solarized Dark
-* Set up a system wide hotkey for iTerm (Keys => Hotkey): Recommended Cmd-Escape
-* Uncheck Use Lion-style full screen on General. This will give you fast full screen windows that are switchable without switching to spaces
+
+#### Font: Hack, 14pt
+* Powershell のパッチをあてたフォントを配布してるリポジトリがあるので，そこからインストール
+
+> https://github.com/powerline/fonts
+
+```bash
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+```
+
+#### Theme: matrial-color
+
+* `itermcolors` から適当に選ぶ
+
+#### その他
+
+* Keys => Hotkey: Cmd-Escape

@@ -6,7 +6,7 @@ vimの設定．
 
 #### Dein.vim
 
-* vimのプラグインマネージャ（あの有名なNeoBundleの後継）
+* vimのプラグインマネージャ（あの有名なNeoBundleの後継）
 * https://github.com/Shougo/dein.vim
 
 #### インストール
@@ -19,7 +19,7 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.vim/bundles
 ```
 
-終わると「こんな感じの設定を.vimrcにしようね」と表示されるので，無駄な抵抗はしないで従う．
+終わると「こんな感じの設定を.vimrcにしようね」と表示されるので，無駄な抵抗はしないで従う．
 
 ```vim
 " dein settings {{{
@@ -66,7 +66,7 @@ endif
 ## vimrc
 
 
-```vim
+```vim
 runtime! config/*.vim
 runtime! config/plugins/*.vim
 ```

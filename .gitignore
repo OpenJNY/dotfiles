@@ -3,10 +3,22 @@
 /*
 /.*
 !/.gitignore
-!/.gitconfig
+!/README.md
+!/setup.sh
 
-# vim:
-# ----
+# Documentations:
+# ---------------
+
+!/homebrew
+!/iterm2
+!/latex
+!/macosx
+!/python
+!/ssh
+!/vim
+
+# Vim settings:
+# -------------
 
 !/.vimrc
 
@@ -14,11 +26,19 @@
 /.vim/bundles/*
 !/.vim/bundles/.gitkeep
 
-# others:
-# -------
+# Git settings:
+# -------------
 
+!/.gitconfig
+!/.gitignore_global
+
+# Other settings:
+# ---------------
+
+!/.bash_profile
+!/.dir_colors
 !/.tmux.conf
 !/.zshrc
 !/.config
+!/.latexmkrc
 !/bin
-

@@ -1,0 +1,21 @@
+[user]
+	name = OpenJNY
+	email = openjny@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+[push]
+	default = simple
+[web]
+	browser = open
+[browser "chrome"]
+	cmd = open -a 'Google Chrome.app'
+[ghq]
+	root = ~/Develop

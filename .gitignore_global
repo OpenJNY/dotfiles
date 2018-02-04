@@ -1,0 +1,51 @@
+## General
+
+# OSX generated files
+.DS_Store
+.DS_Store?
+.localized
+.cache
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Compiled Object files
+*.com
+*.class
+*.slo
+*.lo
+*.o
+*.exe
+*.cuo
+*.pyc
+*.pyo
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# IPython notebook checkpoints
+.ipynb_checkpoints
+
+# Editor temporaries
+*.swp
+*~
+
+# Vi/Vim backup files
+*~
+*.swp
+*.swo
+
+# Emacs backup files
+*~
+*#
+.#*
+

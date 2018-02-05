@@ -15,7 +15,7 @@ set cursorline " カーソル行の行番号をハイライト
 hi  clear CursorLine " カーソルラインを表示しない
 set ruler      "
 set list       " 不可視文字の表示
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:« " 不可視文字の表示形式
+set listchars=tab:»-,trail:-,eol:⏎,extends:»,precedes:« " 不可視文字の表示形式
 set display=uhex        " 印字不可能文字を16進数で表示
 
 

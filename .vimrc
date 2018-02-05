@@ -6,6 +6,8 @@ if &compatible
   set nocompatible
 endif
 
+runtime! config/encoding.vim
+
 " reset augroup
 augroup MyAutoCmd
   autocmd!
@@ -46,6 +48,7 @@ syntax enable
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+
 
 runtime! config/*.vim
 runtime! config/plugins/*.vim

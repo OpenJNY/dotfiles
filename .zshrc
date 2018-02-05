@@ -116,25 +116,42 @@ zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
+
+# coreutils, findutils
+case "${OSTYPE}" in
+darwin*)
+  export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
+  export PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
+  export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
+  export MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
+  ;;
+linux*)
+  ;;
+esac
+
+
 # pyenv
 # -----
 
 export PYENV_ROOT="$HOME/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
-        export PATH="$PYENV_ROOT/bin:$PATH"
-        eval "$(pyenv init -)"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
 
-        alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
-        alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+    # alias
+    alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
+    alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
 fi
 
-# coreutils, findutils
-# * uses for GNU like commands
-# * managed by homebrew
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
-export PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
-export MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
+# CUDA
+# ----
+
+export CUDA_ROOT="/usr/local/cuda"
+if [ -d "${CUDA_ROOT}" ]; then
+  export PATH="${CUDA_ROOT}/bin:${PATH}"
+  export LD_LIBRARY_PATH="${CUDA_ROOT}/extras/CUPTI/lib64:${CUDA_ROOT}/lib64:${CUDA_ROOT}/lib:${LD_LIBRARY_PATH}"
+  export CPATH="${CUDA_ROOT}/include:${CPATH}"
+fi
 
 # Visual Studio Code
 function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }

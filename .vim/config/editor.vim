@@ -1,38 +1,55 @@
 " Editor
-" ---
+" ==========
+
+
+
+" insertモードを抜けるとIMEオフ
+" ------
+set noimdisable
+set iminsert=0 imsearch=0
+set noimcmdline
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+set number     " 行番号表示
+set cursorline " カーソル行の行番号をハイライト
+hi  clear CursorLine " カーソルラインを表示しない
+set ruler      "
+set list       " 不可視文字の表示
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:« " 不可視文字の表示形式
+set display=uhex        " 印字不可能文字を16進数で表示
+
 
 " 括弧入力時の補完
-inoremap { {}<Left
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-" 括弧の対応をハイライト
-set showmatch
+" -----
+" inoremap { {}<Left>
+" inoremap [ []<Left>
+" inoremap ( ()<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 
-" 行番号表示
-set number
-" カーソル行の行番号をハイライト
-set cursorline
-hi clear CursorLine
-set ruler
 
-"不可視文字の表示形式
-set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:« 
+set showmatch           " 括弧の対応をハイライト
 
-" 印字不可能文字を16進数で表示
-set display=uhex
+" Ctrl + hjkl でウィンドウ間を移動
+" -----
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-" 検索時に全て英小文字で入力した場合のみ区別を無視する
-set ignorecase
-set smartcase
-"インクリメンタルサーチを行う。 検索文字を打っている途中で、目的の単語を見つけたらEnterを押下すればよい。
-set incsearch
-" 検索語句のハイライト
-set hlsearch
+
+set expandtab           " Tabキーを空白に変換
+
+
+" 検索
+" -----
+set ignorecase          " ケースを無視して検索する
+set smartcase           " ただし，大文字が混ざっている場合はケースを無視しない
+set incsearch           " インクリメンタルサーチを行う．
+                        " 検索文字を打っている途中で、目的の単語を見つけたらEnterを押下すればよい
+set hlsearch            " 検索語句のハイライト
 
 " 全角スペースの表示
+" -----
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
-

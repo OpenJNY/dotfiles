@@ -116,16 +116,17 @@ zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
-
-
 # pyenv
-#
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# -----
 
-alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
-alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+export PYENV_ROOT="$HOME/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        eval "$(pyenv init -)"
+
+        alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
+        alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+fi
 
 # coreutils, findutils
 # * uses for GNU like commands
@@ -134,9 +135,6 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
 export PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
 export MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
-
-# Mac OS Xでpythonのlocationエラーが出るのを防止する
-export LC_ALL=$LANG
 
 # Visual Studio Code
 function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }

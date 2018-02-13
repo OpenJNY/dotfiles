@@ -124,15 +124,20 @@ darwin*)
   export PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
   export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
   export MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
+
+  # Visual Studio Code
+  function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
   ;;
 linux*)
   ;;
 esac
 
+#---------------------------------------------------------------------------
+# Env
+#---------------------------------------------------------------------------
 
 # pyenv
 # -----
-
 export PYENV_ROOT="$HOME/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="$PYENV_ROOT/bin:$PATH"
@@ -145,7 +150,6 @@ fi
 
 # CUDA
 # ----
-
 export CUDA_ROOT="/usr/local/cuda"
 if [ -d "${CUDA_ROOT}" ]; then
   export PATH="${CUDA_ROOT}/bin:${PATH}"
@@ -153,8 +157,11 @@ if [ -d "${CUDA_ROOT}" ]; then
   export CPATH="${CUDA_ROOT}/include:${CPATH}"
 fi
 
-# Visual Studio Code
-function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
+# Nodebrew
+# --------
+if [ -d "$HOME/.nodebrew" ]; then
+  export PATH="$HOME/.nodebrew/current/bin:$PATH"
+fi
 
 #---------------------------------------------------------------------------
 # Alias

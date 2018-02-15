@@ -1,14 +1,22 @@
 " Editor
 " ==========
 
-
-
 " insertモードを抜けるとIMEオフ
 " ------
 set noimdisable
 set iminsert=0 imsearch=0
 set noimcmdline
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
+
+" tab
+" ---
+
+set tabstop=2 " タブが何文字分として表示されるか
+set expandtab " インデントの生成，タブキーを推した時にスペースを挿入
+set softtabstop=2 " タブキーを押した時に何文字の空白にするか
+set shiftwidth=2 " 自動インデントの際に，何文字空けるか
+set autoindent
 
 set number     " 行番号表示
 set cursorline " カーソル行の行番号をハイライト

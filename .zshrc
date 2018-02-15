@@ -13,7 +13,6 @@ function setlang_en() {
 
 lang=$(locale -a 2> /dev/null | grep -E "(ja_JP.UTF-8|ja_JP.utf8)")
 if [ $? -eq 0 ]; then
-  echo "The locale ${lang} found!"
   export LANG=${lang}
   export LC_ALL="${lang}"
 else
@@ -27,7 +26,6 @@ export EDITOR=vim
 
 # zplug settings:
 # --------------
-
 
 # export ZPLUG_HOME=/usr/local/opt/zplug
 export ZPLUG_HOME=$HOME/.zplug
@@ -269,3 +267,9 @@ alias fd=fzf-find-dirs-cd
 function fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
+
+
+# tmux を立ち上げる
+if [ $SHLVL=1 ]; then
+    tmux
+fi

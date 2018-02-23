@@ -1,0 +1,16 @@
+\RequirePackage{tikz}
+\RequirePackage{tikz-cd}
+\usetikzlibrary{shapes,calc,positioning}
+
+% Rounded Image
+% e.g.
+% \roundpic[xshift=-1cm,yshift=-2.6cm]{5.8cm}{9cm}{filename}
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}
+      };
+    }
+  ] {};
+}

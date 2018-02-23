@@ -268,8 +268,3 @@ function fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
 
-
-# tmux を立ち上げる
-if [ $SHLVL=1 ]; then
-    tmux
-fi

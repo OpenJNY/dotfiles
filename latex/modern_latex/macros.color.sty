@@ -1,0 +1,22 @@
+\RequirePackage[table]{xcolor}
+\RequirePackage{xcolor-material}
+
+% My color
+% --------
+
+\definecolor{TokyoTechColor}{HTML}{005C92}
+\definecolor{TokyoTechComplementaryColor}{HTML}{923600}
+\colorlet{themecolor}{TokyoTechColor}
+\colorlet{themecolorlight}{themecolor!50!white}
+\colorlet{themecolordark}{themecolor!70!black}
+\colorlet{themecolorcomp}{TokyoTechComplementaryColor}
+
+\rowcolors{2}{TokyoTechColor!15}{white}
+\newcommand{\head}[1]{%
+ \textcolor{white}{\textbf{#1}}}
+
+\newcommand{\white}[1]{\textcolor{white}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\White}[1]{\textbf{\white{#1}}}
+\newcommand{\Red}[1]{\textbf{\red{#1}}}

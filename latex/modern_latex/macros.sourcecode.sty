@@ -1,0 +1,133 @@
+
+\RequirePackage{xcolor}
+
+\RequirePackage[scaled]{beramono}
+% \renewcommand*\familydefault{\ttdefault}
+\RequirePackage{listings}
+\RequirePackage[skins,listings,breakable]{tcolorbox}
+
+\definecolor{prebackground}{HTML}{272822}
+\lstset{
+  language=Python,
+  breaklines = true,
+  % columns=[l]{fullflexible},%
+  xrightmargin=5pt,%
+  xleftmargin=5pt,%
+  lineskip=-1ex,%
+  breakindent=4ex,
+  basicstyle={\ttfamily \color[HTML]{272822}},
+  commentstyle={\ttfamily \color[HTML]{00838F}},
+  keywordstyle={\ttfamily \color[HTML]{f92672}},
+  stringstyle={\ttfamily \color[HTML]{00838F}},
+  numbers=none,
+ 	tabsize=2,
+ 	captionpos=b,
+  showstringspaces=false,
+  formfeed=newpage,
+  morekeywords={models, lambda, forms}
+}
+%
+% \lstset{
+%   language=Python,
+%   %背景色と透過度
+%   % backgroundcolor={\color[HTML]{272822}},
+%   %枠外に行った時の自動改行
+%   breaklines = true,
+%   columns=[l]{fullflexible},%
+%   xrightmargin=0zw,%
+%   xleftmargin=14pt,%
+%   lineskip=-0.6ex,%
+%   %自動改行後のインデント量(デフォルトでは20[pt])
+%   breakindent=10pt,
+%   %デフォルト書体
+%   basicstyle={\ttfamily \color[HTML]{272822}},
+%   % identifierstyle={\ttfamily \color[HTML]{00ff00}},
+%   %コメントの書体
+%   commentstyle = {\ttfamily \color[HTML]{00838F}},
+%   %キーワードの書体
+%   keywordstyle = {\ttfamily \color[HTML]{f92672}},
+%   % ndkeywordstyle={\ttfamily \color[HTML]{0000ff}},
+%   %表示する文字の書体
+%   stringstyle = {\ttfamily \color[HTML]{00838F}},
+%   %枠 "t"は上に線を記載, "T"は上に二重線を記載
+%   %他オプション：leftline，topline，bottomline，lines，single，shadowbox
+%   % frame = TBrl,
+%   %frameまでの間隔(行番号とプログラムの間)
+%   % framesep = 5pt,
+%   %行番号
+%   numbers = left,
+%  	stepnumber = 1,
+%   numbersep=6pt,%
+%   numberstyle={\ttfamily\scriptsize\color[HTML]{8e917d}},%
+% 	%タブの大きさ
+%  	tabsize = 2,
+%  	%キャプションの場所("tb"ならば上下両方に記載)
+%  	captionpos = b,
+%   showstringspaces=false,
+%   formfeed=newpage,
+%   morekeywords={models, lambda, forms}
+% }
+
+% \lstset{
+%     % How/what to match
+%     sensitive=true,
+%     % Border (above and below)
+%     frame=lines,
+%     % Extra margin on line (align with paragraph)
+%     xleftmargin=\parindent,
+%     % Put extra space under caption
+%     belowcaptionskip=1\baselineskip,
+%     % Colors
+%     backgroundcolor=\color{sbase03},
+%     basicstyle=\color{sbase00}\ttfamily,
+%     keywordstyle=\color{scyan},
+%     commentstyle=\color{sbase1},
+%     stringstyle=\color{sblue},
+%     numberstyle=\color{sviolet},
+%     identifierstyle=\color{sbase00},
+%     %identifierstyle=
+%     % Break long lines into multiple lines?
+%     breaklines=true,
+%     % Show a character for spaces?
+%     showstringspaces=false,
+%     tabsize=2
+% }
+
+
+\definecolor{prebackcol}{HTML}{fafafa}
+\definecolor{prebordercol}{HTML}{272822}
+\newtcolorbox{pre}[1][0pt]{%
+  breakable,
+  colback=prebackcol,
+  enlarge top by=1em,
+  before skip=20pt plus 2pt minus 2pt,
+  after skip=20pt plus 2pt minus 2pt,
+  arc=0pt, outer arc=0pt,
+  top=-1pt, bottom=-1pt, left= #1 , right=0pt,
+  boxrule=0pt,
+  % borderline west={2pt}{0pt}{prebordercol},
+}
+
+
+% \begin{tcblisting}{
+%   breakable,
+%   listing only,
+%   size=fbox,
+%   boxrule=0pt,
+%   frame hidden,
+%   arc=0pt,
+%   colback=prebackground,
+%   listing options={
+%     language=C,
+%     basicstyle={\ttfamily \color{white}},
+%     commentstyle = {\ttfamily \color[HTML]{e6db74}},
+%     stringstyle = {\ttfamily \color[HTML]{e6db74}},
+%   }}
+% #include <stdio.h>
+%
+% int main(int argc, char ** argv)
+% {
+%   printf("Hello world!\n");
+%   return 0;
+% }
+% \end{tcblisting}

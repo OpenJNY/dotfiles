@@ -1,0 +1,52 @@
+\documentclass[dvipdfmx, uplatex, a4paper]{jsarticle}
+
+\usepackage[pass]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[l2tabu, orthodox]{nag}
+\usepackage[deluxe]{otf}
+\usepackage{lmodern}
+\usepackage{newpxtext}
+
+\usepackage{macros.math}
+\usepackage{macros.color}
+\usepackage{macros.sourcecode}
+\usepackage{macros.tikz}
+\usepackage{macros.env}
+
+% -------------------------------------------------
+% Title, author and keywords
+% -------------------------------------------------
+
+\newcommand\pdftitle{モダンな日本語\LaTeX 環境のテンプレート}
+\newcommand\pdfauther{Junya Yamaguchi}
+\newcommand\pdfkeywords{LaTeX}
+
+\usepackage[dvipdfmx,bookmarks=true,bookmarksnumbered=true,bookmarkstype=toc]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+  pdftitle={\pdftitle},
+  pdfauthor={\pdfauther},
+  pdfkeywords={\pdfkeywords}
+}
+
+\title{\pdftitle}
+\author{\pdfauther}
+\date{\today}
+
+% -------------------------------------------------
+% Document
+% -------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\input{sec.intro}
+\input{sec.sourcecode}
+
+\bibliographystyle{junsrt}
+\nocite{*}
+\bibliography{references}
+
+\end{document}

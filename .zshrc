@@ -178,7 +178,7 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # 履歴の保存ファイル，保存件数（メモリ，ファイル）
 export HISTFILE="${HOME}/.zhistory"
-export HISTSIZE=1000
+export HISTSIZE=10000
 export SAVEHIST=100000
 
 # 履歴をすべてのセッションで共有する
@@ -267,4 +267,8 @@ alias fd=fzf-find-dirs-cd
 function fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
+
+for zshconf in ~/.zsh/*.zsh; do
+  source $zshconf
+done
 

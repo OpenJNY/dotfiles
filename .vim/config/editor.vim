@@ -45,6 +45,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" insert mode 中での移動
+"
 
 set expandtab           " Tabキーを空白に変換
 

@@ -21,3 +21,7 @@ brew install ghostscript
 ```bash
 sudo tlmgr update --self --all
 ```
+
+## テンプレート
+
+https://github.com/OpenJNY/modern-japanese-latex

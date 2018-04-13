@@ -39,6 +39,7 @@
 !/.dir_colors
 !/.tmux.conf
 !/.zshrc
+!/.zsh
 !/.config
 !/.latexmkrc
 !/bin

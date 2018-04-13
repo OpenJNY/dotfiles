@@ -85,7 +85,9 @@ Thumbs.db
 # listings
 *.listing
 *.lol
-
+# XeLaTex
+*.nav
+*.snm
 
 # Emacs backup files
 *~

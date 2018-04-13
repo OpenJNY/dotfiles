@@ -161,6 +161,14 @@ if [ -d "$HOME/.nodebrew" ]; then
   export PATH="$HOME/.nodebrew/current/bin:$PATH"
 fi
 
+# Julia
+# -----
+export JULIA_ROOT="/Applications/Julia-0.6.app/Contents/Resources/julia"
+if [ -d "${JULIA_ROOT}" ]; then
+  export PATH="${JULIA_ROOT}/bin:$PATH"
+fi
+
+
 #---------------------------------------------------------------------------
 # Alias
 #---------------------------------------------------------------------------

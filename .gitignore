@@ -38,6 +38,7 @@
 !/.bash_profile
 !/.dir_colors
 !/.tmux.conf
+!/.tmux.macosx.conf
 !/.zshrc
 !/.zsh
 !/.config

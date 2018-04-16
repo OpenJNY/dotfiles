@@ -7,7 +7,7 @@ DOT_FILES=(
     .gitignore_global
     .latexmkrc
     .tmux.conf
-    .tmux.macosx.conf
+    .tmux.darwin.conf
     .vimrc
     .vim
     .zshrc

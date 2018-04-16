@@ -2,7 +2,9 @@
 
 " colorscheme lucario
 
-if &term =~ "xterm-256color" || "screen-256color"
+if has('termguicolors')
+  set termguicolors
+elseif &term =~ "xterm-256color" || "screen-256color"
   set t_Co=256
   set t_Sf=[3%dm
   set t_Sb=[4%dm

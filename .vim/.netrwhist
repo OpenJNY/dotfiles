@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/jun/work/katsu/test'
 let g:netrw_dirhist_2='/Users/jun/Applications'
+let g:netrw_dirhist_3='/home/jun/dotfiles/.vim'

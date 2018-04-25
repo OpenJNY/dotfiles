@@ -16,9 +16,6 @@ augroup END
 " dein settings {{{
 let s:dein_dir       = expand('~/.vim/bundles')
 let s:dein_repo_dir  = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-let s:toml_dir       = expand('~/.vim/dein')
-let s:toml_file      = s:toml_dir . '/dein.toml'
-let s:lazy_toml_file = s:toml_dir . '/dein_lazy.toml'
 
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
@@ -34,6 +31,10 @@ if dein#load_state(s:dein_dir)
   " all plugins listed in toml
 
   " Note: load toml when start vim or open a certain file.
+  let s:toml_dir       = expand('~/.vim/dein')
+  let s:toml_file      = s:toml_dir . '/dein.toml'
+  let s:lazy_toml_file = s:toml_dir . '/dein_lazy.toml'
+
   call dein#load_toml(s:toml_file, {'lazy': 0})
   call dein#load_toml(s:lazy_toml_file, {'lazy': 1})
 

@@ -60,3 +60,6 @@ let g:previm_custom_css_path = '~/dotfiles/vim/previm/markdown.css'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 on_ft = ['markdown','mkd']
+
+
+

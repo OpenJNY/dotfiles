@@ -39,7 +39,6 @@ let g:easy_align_delimiters = {
 \ '"': { 'pattern': '"', 'filter': 'v/^\s*"/', 'ignore_groups': ['String']},
 \ }
 '''
-# \ '"': { 'pattern': '"', 'ignore_groups': ['!Comment'], 'ignore_unmatched': 0 }
 
 # 括弧の強化
 [[plugins]]
@@ -59,12 +58,12 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 
-[[plugins]]
-repo = 'jdkanani/vim-material-theme'
-hook_add = '''
-"set background=dark
-"colorscheme material-theme
-'''
+# [[plugins]]
+# repo = 'jdkanani/vim-material-theme'
+# hook_add = '''
+# "set background=dark
+# "colorscheme material-theme
+# '''
 #
 # [[plugins]]
 # repo = 'tomasr/molokai'
@@ -72,18 +71,13 @@ hook_add = '''
 # "set background=dark
 # "colorscheme molokai
 # '''
-
-# [[plugins]]
-# repo = 'joshdick/onedark.vim'
-# hook_add = '''
-# "set background=dark
-# "colorscheme onedark
-# "let g:airline_theme='onedark'
-# '''
+#
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'joshdick/onedark.vim'
 hook_add = '''
 set background=dark
-au MyAutoCmd VimEnter * nested colorscheme tender
+colorscheme onedark
+let g:airline_theme='onedark'
 '''
+

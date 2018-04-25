@@ -19,6 +19,4 @@ elseif &term =~ "xterm-color"
 endif
 
 syntax enable
-
 set background=dark
-colorscheme material-theme

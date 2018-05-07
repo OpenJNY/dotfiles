@@ -6,6 +6,8 @@ if &compatible
   set nocompatible
 endif
 
+set nocompatible
+
 runtime! config/encoding.vim
 
 " reset augroup
@@ -53,3 +55,12 @@ endif
 
 runtime! config/*.vim
 runtime! config/plugins/*.vim
+
+set notimeout
+set ttimeout
+set timeoutlen=100
+
+set <xUp>=^[OA
+set <xDown>=^[OB
+set <xRight>=^[OC
+set <xLeft>=^[OD

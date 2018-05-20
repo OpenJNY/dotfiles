@@ -145,8 +145,10 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
 
     # alias
-    alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
-    alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+    if [ -d "$PYENV_ROOT/versions/miniconda3-latest" ]; then
+      alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
+      alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+    fi
 fi
 
 # CUDA

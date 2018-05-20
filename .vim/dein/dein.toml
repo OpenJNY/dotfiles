@@ -40,6 +40,14 @@ let g:easy_align_delimiters = {
 \ }
 '''
 
+# ファイルのテンプレート生成
+[[plugins]]
+repo = 'thinca/vim-template'
+hook_add = '''
+""let g:template_basedir = '~/.config'
+let g:template_free_pattern = 'template'
+'''
+
 # 括弧の強化
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'

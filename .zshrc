@@ -2,6 +2,10 @@
 # Location setting
 # ----------------
 
+# function vim {
+#   env VIRTUAL_ENV=`python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"` /usr/bin/vim "$@"
+# }
+
 function setlang_jp() {
   export LANG=ja_JP.UTF-8
   export LANGUAGE=ja_JP.ja

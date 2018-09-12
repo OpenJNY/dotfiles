@@ -1,3 +1,6 @@
+if [ -f ~/.bashrc ] ; then
+  . ~/.bashrc
+fi
 
 # Location setting
 # ----------------
@@ -56,7 +59,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "chrissicool/zsh-256color"
 
 # clipboard/pbcopy, clippaste/pbpaste の違いを吸収（clip*に統一）
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+#zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+#zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 
 zplug "plugins/git",               from:oh-my-zsh
 zplug "plugins/docker",            from:oh-my-zsh
@@ -69,21 +73,20 @@ bindkey -v
 
 # prompt
 # ------
-zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "modules/prompt", from:prezto
 # zstyle は zplug load の前に設定する
+zplug "modules/prompt", from:prezto
 zstyle ':prezto:module:prompt' theme 'pure'
 
 # インタラクティブフィルタ
-zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+#zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+#zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+# if ! zplug check; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
 
 zplug load
 
@@ -148,7 +151,7 @@ if [ -d "${PYENV_ROOT}" ]; then
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 
-    # alias
+    # alias for activate/deactivate command.
     if [ -d "$PYENV_ROOT/versions/miniconda3-latest" ]; then
       alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
       alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
@@ -176,6 +179,8 @@ export JULIA_ROOT="/Applications/Julia-0.6.app/Contents/Resources/julia"
 if [ -d "${JULIA_ROOT}" ]; then
   export PATH="${JULIA_ROOT}/bin:$PATH"
 fi
+
+eval "$(plenv init -)"
 
 
 #---------------------------------------------------------------------------

@@ -2,6 +2,7 @@
 
 DOT_FILES=(
     .bash_profile
+    .agignore
     .gitconfig
     .gitignore_global
     .latexmkrc

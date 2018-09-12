@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# インストール先を Application に
+# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Install Caskroom
 brew tap caskroom/cask
 brew tap caskroom/versions

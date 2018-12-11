@@ -1,15 +1,14 @@
 # ignore all files
-
 /*
 /.*
 !/.gitignore
 !/README.md
+
+# script
 !/setup.sh
 !/update.sh
 
-# Documentations:
-# ---------------
-
+# ドキュメント
 !/homebrew
 !/iterm2
 !/latex
@@ -18,34 +17,33 @@
 !/ssh
 !/vim
 !/chrome
+!/zsh
 
-# Vim settings:
-# -------------
-
+# editor
 !/.vimrc
 
 !/.vim
 /.vim/bundles/*
 !/.vim/bundles/.gitkeep
 
-# Git settings:
-# -------------
-
+# git
 !/.gitconfig
 !/.gitignore_global
 
-# Other settings:
-# ---------------
-
-!/.bash_profile
-!/.dir_colors
-
+# tmux
 !/.tmux.conf
 !/.tmux.darwin.conf
 
+# shell
+!/.bash_profile
+!/.dir_colors
+!/bin
 !/.zshenv
 !/.zsh
+.zcompdump
 
+# latexmk
 !/.latexmkrc
-!/bin
+
+# ag
 !/.agignore

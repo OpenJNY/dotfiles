@@ -1,20 +1,22 @@
-# Location setting
-# ----------------
-
-# function vim {
-#   env VIRTUAL_ENV=`python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"` /usr/bin/vim "$@"
-# }
-
-
-
-# zplug settings:
-# --------------
+########################
+# zplug
+########################
 
 # export ZPLUG_HOME=/usr/local/opt/zplug
 export ZPLUG_HOME=$HOME/.zplug
+
+if [ ! -d "$ZPLUG_HOME" ]; then
+  git clone https://github.com/zplug/zplug $ZPLUG_HOME
+fi
+
 source $ZPLUG_HOME/init.zsh
 
+# zplug 自身で zplug を管理
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# -----------------
+# カスタム設定
+# -----------------
 
 # Additional completion definitions for Zsh
 zplug "zsh-users/zsh-completions"
@@ -26,6 +28,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # If this module is used in conjuncture with the syntax-highlighting module, it must be loaded after it.
 zplug "zsh-users/zsh-autosuggestions"
+# 構文のハイライト
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
 # This ZSH plugin enhances the terminal environment with 256 colors.
@@ -40,6 +43,7 @@ zplug "plugins/docker",            from:oh-my-zsh
 zplug "plugins/docker-compose",    from:oh-my-zsh
 zplug "plugins/common-aliases",    from:oh-my-zsh
 
+# vim 風の操作を可能にする
 zplug "modules/editor", from:prezto
 zstyle ':prezto:module:editor' key-bindings 'vim'
 bindkey -v
@@ -53,6 +57,11 @@ zstyle ':prezto:module:prompt' theme 'pure'
 # インタラクティブフィルタ
 #zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 #zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+
+
+# -----------------
+# カスタム設定の終了
+# -----------------
 
 # if ! zplug check; then
 #     printf "Install? [y/N]: "
@@ -228,7 +237,7 @@ function fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
 
-for dotzsh in ~/.zsh/*.zsh; do
+for dotzsh in $ZDOTDIR/opt/*.zsh; do
   source $dotzsh
 done
 

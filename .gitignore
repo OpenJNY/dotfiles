@@ -5,6 +5,7 @@
 !/.gitignore
 !/README.md
 !/setup.sh
+!/update.sh
 
 # Documentations:
 # ---------------
@@ -16,6 +17,7 @@
 !/python
 !/ssh
 !/vim
+!/chrome
 
 # Vim settings:
 # -------------
@@ -41,9 +43,9 @@
 !/.tmux.conf
 !/.tmux.darwin.conf
 
-!/.zshrc
+!/.zshenv
 !/.zsh
 
-!/.config
 !/.latexmkrc
 !/bin
+!/.agignore

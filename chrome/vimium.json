@@ -1,0 +1,66 @@
+{
+  "settingsVersion": "1.63.3",
+  "exclusionRules": [
+    {
+      "pattern": "https?://localhost:\\d+/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://ssh.cloud.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://\\d+.\\d+.\\d+.\\d*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://typing.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.e-typing.ne.jp/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.kaggle.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.kaggleusercontent.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.draw.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://cloudlatex.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.overleaf.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# Insert your preferred key mappings here.\n\nunmap H\nunmap L\nmap H goBack\nmap L goForward\n\nunmap <c-h>\nunmap <c-l>\nmap <c-h> previousTab\nmap <c-l> nextTab\n\nunmap d\nunmap u\nmap <c-d> scrollPageDown\nmap <c-u> scrollPageUp\nmap <c-f> scrollFullPageDown\nmap <c-b> scrollFullPageUp\n\n#map i LinkHints.activateMode\n#map I LinkHints.activateModeToOpenInNewTab\n\nunmap x\nmap dd removeTab\nunmap X\nmap <c-r> restoreTab\nmap u restoreTab",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>,次,次へ",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<,前,前へ",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": true,
+  "scrollStepSize": 100,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "w: http://ja.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nwe: http://en.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia@En\n\ny: http://www.youtube.jp/results?search_query=%s Youtube\n\na: http://www.amazon.co.jp/s/?field-keywords=%s Amazon\n\ngen: https://www.google.com/search?gl=us&hl=en&source=hp&q=%s Google English\ngs: https://scholar.google.co.jp/scholar?q=%s Google Scholar\ngm: https://www.google.com/maps?q=%s Google Maps\ngi: http://www.google.co.jp/search?hl=ja&source=hp&q=%s&tbm=isch Google 画像検索\n\nt: https://translate.google.com/#en/ja/%s Google 翻訳 | en -> jp\nten: https://translate.google.com/#en/ja/%s Google 翻訳 | en -> jp\ntjp: https://translate.google.com/#ja/en/%s Google 翻訳 | jp -> en\n\nq: https://qiita.com/search?q=%s Qiita\nqs: https://qiita.com/search?stocked=1&q=%s Qiita stock\n\ngithub: https://github.com/search?utf8=%E2%9C%93&q=%s GitHub Repo.\nmygithub: https://github.com/search?utf8=%E2%9C%93&q=user%3Aopenjny+%s GitHub My Repo.\n\narxiv: https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=%s&terms-0-field=all&classification-computer_science=y&classification-physics_archives=all&classification-statistics=y&date-filter_by=past_12&date-year=2018&date-from_date=&date-to_date=&size=50&order=-submitted_date arXiv newest",
+  "searchUrl": "https://www.google.co.jp/search?q=",
+  "userDefinedLinkHintCss": "/* Arc Dark theme */\n\ndiv > .vimiumHintMarker {\n  /* Link hint boxes */\n  background: #182C61;\n  font-size: 13px;\n  border: 0.25em solid #383c4a;\n  border-radius: 0.68em;\n  box-shadow: 0em 0.1em 0.1em 0.1em rgba(24, 44, 97, 0.4);\n}\n\ndiv > .vimiumHintMarker span {\n  /* Link hint text */\n  color: #e2e3e7;\n  font-size: inherit;\n  text-shadow: none;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n  /* Link hint matching characters */\n  color: #5294e2;\n}"
+}

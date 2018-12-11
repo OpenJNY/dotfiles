@@ -9,10 +9,10 @@
 !/update.sh
 
 # ドキュメント
+!/ossetup
 !/homebrew
 !/iterm2
 !/latex
-!/macosx
 !/python
 !/ssh
 !/vim

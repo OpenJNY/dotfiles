@@ -10,14 +10,12 @@
 
 # ドキュメント
 !/ossetup
-!/homebrew
-!/iterm2
+!/terminal
 !/latex
 !/python
 !/ssh
 !/vim
 !/chrome
-!/zsh
 
 # editor
 !/.vimrc

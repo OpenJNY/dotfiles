@@ -6,7 +6,7 @@
 
 # script
 !/setup.sh
-!/update.sh
+!/uninstall.sh
 
 # ドキュメント
 !/ossetup

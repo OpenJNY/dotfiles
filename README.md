@@ -14,6 +14,12 @@ git clone git@github.com:OpenJNY/dotfiles.git ~/dotfiles
 ~/dotfiles/setup.sh
 ```
 
+シンボリックリンクを unlink する
+
+```bash
+~/dotfiles/uninstall.sh
+```
+
 ## ファイルの説明
 
 * ドットから始まるファイル（e.g. `.latexmkrc`）

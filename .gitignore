@@ -10,13 +10,7 @@
 !/uninstall.sh
 
 # ドキュメント
-!/ossetup
-!/terminal
-!/latex
-!/python
-!/ssh
-!/vim
-!/chrome
+!/doc
 
 # editor
 !/.vimrc

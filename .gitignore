@@ -34,6 +34,7 @@
 !/.zshenv
 !/.zsh
 .zcompdump
+!/.dircolors
 
 # latexmk
 !/.latexmkrc

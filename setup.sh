@@ -18,6 +18,7 @@ create_symlink() {
 DOT_FILES=(
   bin
   .agignore
+  .dircolors
   .gitconfig
   .gitignore_global
   .latexmkrc

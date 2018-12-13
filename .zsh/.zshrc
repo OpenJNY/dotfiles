@@ -107,6 +107,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
 
+
 # coreutils, findutils
 case "${OSTYPE}" in
 darwin*)
@@ -122,13 +123,19 @@ linux*)
   ;;
 esac
 
-LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:';
-export LS_COLORS
 
-#---------------------------------------------------------------------------
-# Env
-#---------------------------------------------------------------------------
+if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
+  eval `dircolors ~/.dircolors`
+else
+  LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:';
+  export LS_COLORS
+fi
 
+if [ -n "$LS_COLORS" ]; then
+  # zsh の補完（候補）にも dircolors を適用する
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+  # zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+fi
 
 #---------------------------------------------------------------------------
 # Alias
@@ -138,8 +145,6 @@ alias ls="ls --color=auto -G"
 alias ll='ls -ltr'
 alias la="ls -lhAF --color=auto"
 
-alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
-
 # History
 # -------
 
@@ -147,7 +152,9 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # 履歴の保存ファイル，保存件数（メモリ，ファイル）
 export HISTFILE="${HOME}/.zhistory"
-export HISTSIZE=10000
+# メモリに保存されるヒストリ数
+export HISTSIZE=1000
+# 履歴ファイルに保存されるヒストリ数
 export SAVEHIST=100000
 
 # 履歴をすべてのセッションで共有する
@@ -173,70 +180,43 @@ setopt inc_append_history
 # 履歴を展開してもすぐには実行しない
 setopt hist_verify
 
+# usecase:
+# $ function history-all { history -E 1 }
+function history-all { history -E 1 }
 
-function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
-  CURSOR=$#BUFFER
-  # zle accept-line # 現在行に書かれてあるコマンドを実行する
-  # zle clear-screen # 画面をクリア（一番上に現在行が来るようにシフト）
-}
+# fzf の読み込み
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-zle -N select-history
-bindkey '^r' select-history
+function my-history-search() {
+  if type "fzf" >/dev/null 2>&1; then
+    BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+    CURSOR=$#BUFFER
+    # zle accept-line # 現在行に書かれてあるコマンドを実行する
+    # zle clear-screen # 画面をクリア（一番上に現在行が来るようにシフト）
+  else
+    # バージョンによって条件分岐するために使用するモジュールを開放する
+    autoload -Uz is-at-least
 
-# Git
-# ---
-
-function checkout() {
-  local branches branch
-  branches=$(git branch -vv) &&
-  branch=$(echo "$branches" | fzf +m) &&
-  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
-}
-
-
-# Change Directory
-# ----------------
-
-function fe() {
-  local file
-  file=$(fzf --query="$1" --select-1 --exit-0)
-  [ -n "$file" ] && ${EDITOR:-vim} "$file"
-}
-
-# ファイルかディレクトリの名前の一部を渡すと，適当な深さまで調べて移動するコマンド
-function fzf-find-file-cd() {
-  local FILENAME="$1"
-  local MAXDEPTH="${2:-4}"
-  local BASE_DIR="${3:-`pwd`}"
-  if [ -z "$FILENAME" ] ; then
-    echo "Usage: fzf-find-file-cd <filename> [<maxdepth=4> [<basedir='.']]"
-    return 1
+    # 4.3.9 以降ではインクリメンタルパターンサーチが出来るので、それを利用する
+    # なければデフォルトでマッピングされているものを利用する
+    if is-at-least 4.3.9; then
+      # zsh -la <widget> とすることで、widget に完全一致するウィジェットが
+      # 存在する場合、返却値 0 で終了する
+      zle -la history-incremental-pattern-search-backward && bindkey "^r" history-incremental-pattern-search-backward
+    else
+      history-incremental-search-backward
+    fi
   fi
-  local dir=$(find ${BASE_DIR} -maxdepth ${MAXDEPTH} -name "*${FILENAME}*" | fzf +m)
-  if [ ! -d ${dir} ]; then
-    dir=${dir%/*}
-  fi
-  echo cd "$dir"
-  cd "$dir"
 }
 
-alias findcd=fzf-find-file-cd
+# 作ったシェル関数をウィジェットに登録
+zle -N my-history-search
+# Ctrl + r にキーバインド
+bindkey '^r' my-history-search
 
-# 指定した場所より下位層にあるすべてのディレクトリ (隠しディレクトリ以外) を表示して，
-# 選んだディレクトリに飛ぶ
-function fzf-find-dirs-cd() {
-  local dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m) &&
-  echo cd "$dir" &&
-  cd "$dir"
-}
-alias fd=fzf-find-dirs-cd
 
-# fkill - kill process
-function fkill() {
-  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
-}
 
+# opt ディレクトリ以下に作成した自作 .zsh 設定を読み込む
 for dotzsh in $ZDOTDIR/opt/*.zsh; do
   source $dotzsh
 done

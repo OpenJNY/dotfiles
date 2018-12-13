@@ -107,23 +107,6 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
 
-
-# coreutils, findutils
-case "${OSTYPE}" in
-darwin*)
-  export PATH=/usr/local/opt/coreutils/libexec/gnubin:${PATH}
-  export PATH=/usr/local/opt/findutils/libexec/gnubin:${PATH}
-  export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}
-  export MANPATH=/usr/local/opt/findutils/libexec/gnuman:${MANPATH}
-
-  # Visual Studio Code
-  function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
-  ;;
-linux*)
-  ;;
-esac
-
-
 if [[ -f ~/.dircolors && -x `which dircolors` ]]; then
   eval `dircolors ~/.dircolors`
 else
@@ -214,10 +197,21 @@ zle -N my-history-search
 # Ctrl + r にキーバインド
 bindkey '^r' my-history-search
 
+# プラットフォーム別の設定
+# ただし，環境変数に関するものは zshenv で対応すること
+case "${OSTYPE}" in
+darwin*)
+  [ -f "$ZDOTDIR/darwin.zshrc" ] && source "$ZDOTDIR/darwin.zshrc"
+  ;;
+linux*)
+  [ -f "$ZDOTDIR/linux.zshrc" ] && source "$ZDOTDIR/linux.zshrc"
+  ;;
+esac
 
+# ローカル専用の設定
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
 # opt ディレクトリ以下に作成した自作 .zsh 設定を読み込む
 for dotzsh in $ZDOTDIR/opt/*.zsh; do
   source $dotzsh
 done
-

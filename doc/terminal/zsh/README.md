@@ -1,17 +1,27 @@
 # zsh のドキュメント
 
-## インストール方法
+## インストール
 
-### Ubuntu の場合
+### zsh のインストールとログインシェルの変更
+
+#### Mac OS X の場合
+
+Homebrew を使ってインストールするのが楽
 
 ```bash
-$ sudo apt install zsh
+brew install zsh
+```
+
+#### Ubuntu の場合
+
+```bash
+sudo apt install zsh
 ```
 
 ちゃんとインストール出来たか確認
 
 ```bash
-$ which zsh
+which zsh
 ```
 
 デフォルトのログインシェルに設定するために，上記のパスを設定
@@ -24,6 +34,14 @@ Enter the new value, or press ENTER for the default
     Login Shell [/bin/bash]: /usr/bin/zsh
 ```
 
-## ZDOTDIR について
+### fzf のインストール
 
-zsh は最初に
+* 更新日時：2018/12/14
+* 最新の情報は [公式のインストール手順](https://github.com/junegunn/fzf#installation) を参照のこと
+
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+`install` を実行した時に `.bashrc` や `.zshrc` に初期化ファイルの読み込みを自動で追加するかを聞かれるが，既に記載しているので不要（`n` と入力）

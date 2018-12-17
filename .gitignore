@@ -42,3 +42,6 @@
 
 # ag
 !/.agignore
+
+# binの中のローカルファイル
+/bin/python

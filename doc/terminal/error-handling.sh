@@ -1,8 +1,8 @@
 #!/bin/bash
 
-function die () {
-    echo "${@}"
-    exit 1
+die() {
+    echo "${1}" >&2 # send to stderr
+    exit "${2:-1}" # default error code: 1
 }
 
 url="hogehoge"

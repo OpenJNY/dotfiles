@@ -15,3 +15,15 @@ function checkout() {
   branch=$(echo "$branches" | fzf +m) &&
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
+
+# ghs
+# 
+# $ sudo npm i -g gh-search-cli
+
+function search-github-commit-msg() {
+  ghs commits "$*" -j > /tmp/ghs.log.json
+  cat /tmp/ghs.log.json | jq -r '.[].commit.message' 
+  echo "[search_commit_msg] The log file were saved at /tmp/ghs.log.json"
+}
+
+alias ghs-commits='search-github-commit-msg'

@@ -81,11 +81,17 @@ repo = 'vim-airline/vim-airline-themes'
 # '''
 #
 
-[[plugins]]
-repo = 'joshdick/onedark.vim'
-hook_add = '''
-set background=dark
-colorscheme onedark
-let g:airline_theme='onedark'
-'''
+# [[plugins]]
+# repo = 'joshdick/onedark.vim'
+# hook_add = '''
+# set background=dark
+# colorscheme onedark
+# let g:airline_theme='onedark'
+# '''
 
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+hook_add = '''
+syntax on
+colorscheme nord
+'''

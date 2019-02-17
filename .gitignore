@@ -43,5 +43,7 @@
 # ag
 !/.agignore
 
+!/.Xmodmap
+
 # binの中のローカルファイル
 /bin/python

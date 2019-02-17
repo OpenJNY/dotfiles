@@ -28,6 +28,7 @@ DOT_FILES=(
   .vim
   .zshenv
   .zsh
+  .Xmodmap
 )
 
 for dotfile in ${DOT_FILES[@]}; do

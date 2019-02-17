@@ -1,0 +1,25 @@
+! For reset settings:
+! $ setxkbmap -option
+
+! remove Caps Lock
+clear lock
+remove Lock = Caps_Lock
+remove Shift = Caps_Lock
+
+! Add mode Mode_switch
+! 物理キーID 66 (大抵の場合 Caps) を押すと Mode_switch が発生する
+keycode 66 = Mode_switch
+
+! Vim-style arrow
+! keycode <key id> = <key> <shift + key> <Mode_switch + key> <Mode_switch + shift + key>
+keycode 43 = h H Left Left
+keycode 44 = j J Down Down
+keycode 45 = k K Up Up
+keycode 46 = l L Right Right
+
+keycode 53 = x X BackSpace BackSpace
+
+! keysym h = h H Left
+! keysym l = l L Right
+! keysym k = k K Up
+! keysym j = j J Down

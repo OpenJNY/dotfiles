@@ -50,8 +50,8 @@ if [ -d "${PYENV_ROOT}" ]; then
 
   # alias for activate/deactivate command.
   if [ -d "$PYENV_ROOT/versions/miniconda3-latest" ]; then
-    alias activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
-    alias deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
+    alias conda-activate="source $PYENV_ROOT/versions/miniconda3-latest/bin/activate"
+    alias conda-deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
   fi
 fi
 

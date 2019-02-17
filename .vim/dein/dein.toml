@@ -56,6 +56,10 @@ repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'mhinz/vim-startify'
 
+# tree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
 # Appearance
 # ----------
 

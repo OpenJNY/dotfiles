@@ -63,3 +63,10 @@ set hlsearch            " 検索語句のハイライト
 " -----
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
+
+
+" バッファ
+" --------------
+nnoremap <silent>bp :bprevious<CR>
+nnoremap <silent>bn :bnext<CR>
+nnoremap <silent>bb :b#<CR>

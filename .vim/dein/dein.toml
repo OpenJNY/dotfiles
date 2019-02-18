@@ -60,6 +60,16 @@ repo = 'mhinz/vim-startify'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+# 囲んだ範囲をコメント
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+# Perl の正規表現を使う
+# :M/hoge で検索
+# :S/hoge/foo で置換
+[[plugins]]
+repo = 'othree/eregex.vim'
+
 # Appearance
 # ----------
 
@@ -88,7 +98,7 @@ repo = 'vim-airline/vim-airline-themes'
 # [[plugins]]
 # repo = 'joshdick/onedark.vim'
 # hook_add = '''
-# set background=dark
+# syntax on
 # colorscheme onedark
 # let g:airline_theme='onedark'
 # '''

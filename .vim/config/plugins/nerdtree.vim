@@ -11,5 +11,5 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " ディレクトリ表示記号を変更
 let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable  = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
+" let g:NERDTreeDirArrowExpandable  = '▶'
+" let g:NERDTreeDirArrowCollapsible = '▼'

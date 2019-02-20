@@ -2,6 +2,9 @@
 # Change Directory
 # ----------------
 
+# git でインストールした fzf の読み込み
+[[ -f "~/.fzf" && -f "~/.fzf.zsh" ]] && source ~/.fzf.zsh
+
 function fe() {
   local file
   file=$(fzf --query="$1" --select-1 --exit-0)

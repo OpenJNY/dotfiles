@@ -164,14 +164,10 @@ setopt inc_append_history
 setopt hist_verify
 
 # usecase:
-# $ function history-all { history -E 1 }
 function history-all { history -E 1 }
 
-# fzf の読み込み
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 function my-history-search() {
-  if type "fzf" >/dev/null 2>&1; then
+  if type fzf >/dev/null 2>&1; then
     BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
     CURSOR=$#BUFFER
     # zle accept-line # 現在行に書かれてあるコマンドを実行する

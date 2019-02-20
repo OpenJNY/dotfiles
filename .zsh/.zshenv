@@ -21,6 +21,7 @@ case "${OSTYPE}" in
     CUDA_ROOT="/usr/local/cuda"
     PYENV_ROOT="$HOME/.pyenv"
     NODEBREW_ROOT="$HOME/.nodebrew"
+    LINUXBREW_ROOT="/home/linuxbrew/.linuxbrew"
     ;;
 esac
 
@@ -80,4 +81,8 @@ if [ -d "${PLENV_ROOT}" ]; then
   export PLENV_ROOT
   export PATH="${PLENV_ROOT}/bin:$PATH"
   eval "$(plenv init -)"
+fi
+
+if [ -d "${LINUXBREW_ROOT}" ]; then
+  eval $("${LINUXBREW_ROOT}"/bin/brew shellenv)
 fi

@@ -7,7 +7,7 @@ function pip-update-all() {
 
 # zsh のディレクトリの変更時に chpwd 関数が呼ばれる仕様を利用して
 # 自動で vertualenv をアクティベートする
-function chpwd_pyvenv() {
+function auto_activate_venv() {
     if [ -d .venv ]; then
         source .venv/bin/activate
     elif [ -d venv ]; then
@@ -15,8 +15,8 @@ function chpwd_pyvenv() {
     fi
 }
 
-chpwd_pyvenv # for initialization
-add-zsh-hook chpwd chpwd_pyvenv
+auto_activate_venv # for initialization
+add-zsh-hook chpwd auto_activate_venv
 
 # alias venv='source venv/bin/activate'
 

@@ -136,7 +136,7 @@ alias la="ls -lhAF --color=auto"
 # 履歴の保存ファイル，保存件数（メモリ，ファイル）
 export HISTFILE="${HOME}/.zhistory"
 # メモリに保存されるヒストリ数
-export HISTSIZE=1000
+export HISTSIZE=10000
 # 履歴ファイルに保存されるヒストリ数
 export SAVEHIST=100000
 
@@ -197,10 +197,10 @@ bindkey '^r' my-history-search
 # ただし，環境変数に関するものは zshenv で対応すること
 case "${OSTYPE}" in
 darwin*)
-  [ -f "$ZDOTDIR/darwin.zshrc" ] && source "$ZDOTDIR/darwin.zshrc"
+  [ -f "$MYZDOTDIR/darwin.zshrc" ] && source "$MYZDOTDIR/darwin.zshrc"
   ;;
 linux*)
-  [ -f "$ZDOTDIR/linux.zshrc" ] && source "$ZDOTDIR/linux.zshrc"
+  [ -f "$MYZDOTDIR/linux.zshrc" ] && source "$MYZDOTDIR/linux.zshrc"
   ;;
 esac
 
@@ -208,6 +208,7 @@ esac
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
 # opt ディレクトリ以下に作成した自作 .zsh 設定を読み込む
-for dotzsh in $ZDOTDIR/opt/*.zsh; do
+for dotzsh in $MYZDOTDIR/opt/*.zsh; do
   source $dotzsh
 done
+

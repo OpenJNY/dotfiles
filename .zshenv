@@ -10,10 +10,13 @@
 # $ZDOTDIR/.zshrc
 # /etc/zlogin
 # $ZDOTDIR/.zlogin
-export ZDOTDIR=$HOME/.zsh
+
+#export ZDOTDIR=$HOME/.zsh
+export MYZDOTDIR=$HOME/.zsh
 
 # 本当の .zshenv を呼び出す
 # この後 zsh は上記ファイルの `/etc/zprofile` の読み込みから再開する
-if [ -f "$ZDOTDIR/.zshenv" ] ; then
-  source $ZDOTDIR/.zshenv
+if [ -f "$MYZDOTDIR/.zshenv" ] ; then
+  source $MYZDOTDIR/.zshenv
 fi
+

@@ -28,3 +28,31 @@ alias jupyter-notebook-silent='jupyter notebook --no-browser'
 
 export PIPENV_VENV_IN_PROJECT=1
 
+# Anaconda
+# --------
+export CONDA_ROOT='$HOME/.pyenv/versionis/miniconda3-latest'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(conda 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$CONDA_ROOT/etc/profile.d/conda.sh" ]; then
+        . "$CONDA_ROOT/etc/profile.d/conda.sh"
+    else
+        export PATH="$CONDA_ROOT/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+if which conda >/dev/null; then
+  # source $(conda info --root)/etc/profile.d/conda.sh
+
+  alias cona='conda activate'
+  alias cond='conda deactivate'
+  alias conl='conda env list'
+fi
+

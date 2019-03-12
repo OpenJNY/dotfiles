@@ -20,6 +20,18 @@
 [ghq]
 	root = ~/Develop
 [alias]
+  a = add
+  b = branch
+  s = status -uall
+  d = diff
+  p = push
+  cm = commit
+  co = checkout
+  comas = checkout master
+  l = log --graph --decorate --all --oneline
+  lgg = log --graph --all --decorate
+  difff = diff --name-only
+
   # list
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 

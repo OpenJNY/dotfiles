@@ -27,3 +27,5 @@ function search-github-commit-msg() {
 }
 
 alias ghs-commits='search-github-commit-msg'
+
+alias tree='tree -N'

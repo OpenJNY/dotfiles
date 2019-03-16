@@ -35,9 +35,11 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "chrissicool/zsh-256color"
 
 # clipboard/pbcopy, clippaste/pbpaste の違いを吸収（clip*に統一）
-#zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 #zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 
+zplug "lib/clipboard",             from:oh-my-zsh
+zplug "lib/grep",                  from:oh-my-zsh
+zplug "lib/directories.zsh",       from:oh-my-zsh
 zplug "plugins/git",               from:oh-my-zsh
 zplug "plugins/docker",            from:oh-my-zsh
 zplug "plugins/docker-compose",    from:oh-my-zsh
@@ -205,7 +207,7 @@ linux*)
 esac
 
 # ローカル専用の設定
-[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+[ -f "$HOME/local.zshrc" ] && source "$HOME/local.zshrc"
 
 # opt ディレクトリ以下に作成した自作 .zsh 設定を読み込む
 for dotzsh in $ZDOTDIR/opt/*.zsh; do

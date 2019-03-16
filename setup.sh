@@ -28,6 +28,7 @@ DOT_FILES=(
   .vim
   .zshenv
   .zsh
+  .zshrc
   .Xmodmap
 )
 

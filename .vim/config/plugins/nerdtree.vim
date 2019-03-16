@@ -6,7 +6,7 @@ nmap <silent><C-n> :NERDTreeToggle<CR>
 let g:NERDTreeShowBookmarks=1
 
 " 起動時に NERDTree を表示
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 " ただし、ファイル名を指定して開いた時は非表示
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

@@ -70,6 +70,12 @@ repo = 'tpope/vim-commentary'
 [[plugins]]
 repo = 'othree/eregex.vim'
 
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
 # Appearance
 # ----------
 

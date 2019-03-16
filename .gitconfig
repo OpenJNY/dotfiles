@@ -5,6 +5,7 @@
 	editor = vim
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
+	quotepath = false
 [color]
 	status = auto
 	diff = auto
@@ -24,7 +25,7 @@
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 
   # Make this a git repo
-  this = !git init && git add . && git commit -m \"Initial commit\"
+  this = !git init && git add . && git commit -m \":tada: Initial commit\"
 
   # Quickly add a file/dir to .gitignore.
   # ignore = !([ ! -e .gitignore ] && touch .gitignore) && echo $1 >> .gitignore
@@ -32,3 +33,6 @@
 
   # Add remote repo. as origin
   addorigin = remote add origin # <https://..., git://...>
+
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

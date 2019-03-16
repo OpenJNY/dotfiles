@@ -153,7 +153,7 @@ Session.vim
 # Temporary
 .netrwhist
 # Auto-generated tag files
-tags
+# tags
 # Persistent undo
 [._]*.un~
 
@@ -185,3 +185,4 @@ ipython_config.py
 # pyenv
 .python-version
 venv/
+.venv/

@@ -3,15 +3,6 @@
 
 case "${OSTYPE}" in
   darwin*)
-    if [ -d "/usr/local/opt/coreutils/libexec/gnubin" ]; then
-      export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-      export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-    fi
-
-    if [ -d "/usr/local/opt/findutils/libexec/gnubin" ]; then
-      export PATH="/usr/local/opt/findutils/libexec/gnubin:${PATH}"
-      export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
-    fi
 
     JULIA_ROOT="/Applications/Julia-0.6.app/Contents/Resources/julia"
     PYENV_ROOT="$HOME/.pyenv"
@@ -55,6 +46,8 @@ if [ -d "${PYENV_ROOT}" ]; then
     alias conda-deactivate="source $PYENV_ROOT/versions/miniconda3-latest/bin/deactivate"
   fi
 fi
+
+echo $PATH
 
 # CUDA
 if [ -d "${CUDA_ROOT}" ]; then

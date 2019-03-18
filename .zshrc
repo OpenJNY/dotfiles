@@ -45,6 +45,7 @@ zplug "plugins/git",               from:oh-my-zsh
 zplug "plugins/docker",            from:oh-my-zsh
 zplug "plugins/docker-compose",    from:oh-my-zsh
 zplug "plugins/common-aliases",    from:oh-my-zsh
+zplug "plugins/extract",           from:oh-my-zsh
 
 # vim 風の操作を可能にする
 zplug "modules/editor", from:prezto

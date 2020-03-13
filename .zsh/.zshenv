@@ -47,8 +47,6 @@ if [ -d "${PYENV_ROOT}" ]; then
   fi
 fi
 
-echo $PATH
-
 # CUDA
 if [ -d "${CUDA_ROOT}" ]; then
   export CUDA_ROOT

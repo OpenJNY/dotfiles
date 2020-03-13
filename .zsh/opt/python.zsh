@@ -25,7 +25,6 @@ alias jupyter-notebook-silent='jupyter notebook --no-browser'
 
 # Pipenv
 # ------
-
 export PIPENV_VENV_IN_PROJECT=1
 
 # Anaconda

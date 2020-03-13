@@ -20,3 +20,5 @@ set_keyboard_setting() {
     xmodmap $HOME/.Xmodmap
     xcape -e 'Mode_switch=Escape'
 }
+
+PATH="$(systemd-path user-binaries):$PATH"

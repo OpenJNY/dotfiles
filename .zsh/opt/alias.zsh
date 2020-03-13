@@ -1,6 +1,3 @@
-
-alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
-
 # ag (the silver searcher)
 # ------------------------
 alias ag='ag -S --stats --pager "less -F"'
@@ -19,7 +16,6 @@ function checkout() {
 # ghs
 # 
 # $ sudo npm i -g gh-search-cli
-
 function search-github-commit-msg() {
   ghs commits "$*" -j > /tmp/ghs.log.json
   cat /tmp/ghs.log.json | jq -r '.[].commit.message' 
@@ -27,5 +23,4 @@ function search-github-commit-msg() {
 }
 
 alias ghs-commits='search-github-commit-msg'
-
 alias tree='tree -N'

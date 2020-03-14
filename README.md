@@ -2,25 +2,15 @@
 
 ## 使い方
 
-ローカルに clone
+Install
 
 ```bash
 git clone git@github.com:OpenJNY/dotfiles.git ~/dotfiles
-```
-
-シンボリックリンクを貼る
-
-```bash
 ~/dotfiles/setup.sh
+(cat /etc/shells | grep zsh >/dev/null) && chsh -s $(which zsh)
 ```
 
-ログイシェルを zsh に変更
-
-```bash
-chsh -s $(which zsh)
-```
-
-シンボリックリンクを unlink する
+Uninstall
 
 ```bash
 ~/dotfiles/uninstall.sh

@@ -14,6 +14,12 @@ git clone git@github.com:OpenJNY/dotfiles.git ~/dotfiles
 ~/dotfiles/setup.sh
 ```
 
+ログイシェルを zsh に変更
+
+```bash
+chsh -s $(which zsh)
+```
+
 シンボリックリンクを unlink する
 
 ```bash

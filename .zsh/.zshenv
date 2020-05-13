@@ -77,3 +77,5 @@ fi
 if [ -d "${LINUXBREW_ROOT}" ]; then
   eval $("${LINUXBREW_ROOT}"/bin/brew shellenv)
 fi
+
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
